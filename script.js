@@ -65,7 +65,6 @@ function setupAutoComplete() {
     minChars: 3,
     transformResult: transformSuggestionsResponse,
     onSelect: onSuggestionSelect
-
   });
 }
 
