@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Skypicker jQuery Client</title>
+
+  <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="node_modules/jquery-date-range-picker/dist/daterangepicker.min.css">
+  <link rel="stylesheet" href="node_modules/toastr/build/toastr.min.css">
+  <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css">
+  <style>
+    .autocomplete-suggestions { border: 1px solid #999; background: #FFF; overflow: auto; }
+    .autocomplete-suggestion { padding: 2px 5px; white-space: nowrap; overflow: hidden; }
+    .autocomplete-selected { background: #F0F0F0; }
+    .autocomplete-suggestions strong { font-weight: normal; color: #3399FF; }
+    .autocomplete-group { padding: 2px 5px; }
+    .autocomplete-group strong { display: block; border-bottom: 1px solid #000; }
+
+    .card {
+      margin-top: 15px;
+    }
+
+    .card-header i {
+      margin: 0 5px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container-fluid">
+    <form class="row">
+      <div class="col"><input required class="from form-control typeahead" autocomplete="off" type="text" id="from" placeholder="From"></div>
+      <div class="col"><input required class="to form-control typeahead" autocomplete="off" type="text" id="to" placeholder="To"></div>
+      <div class="col"><input required class="form-control" type="text" id="date" placeholder="Date"></div>
+      <div class="col col-1 text-right">
+        <button data-loading-text="<i class='fa fa-spinner fa-spin '></i> Searching..." type="submit" class="btn btn-primary">Search</button>
+      </div>
+    </form>
+
+    <div class="search-results">
+      <div class="alert alert-danger" style="display: none;">No results found to your criteria.</div>
+      <div class="results-wrapper row"></div>
+    </div>
+
+  </div>
+
+  <script src="node_modules/jquery/dist/jquery.js"></script>
+  <script src="node_modules/moment/min/moment.min.js"></script>
+  <script src="node_modules/jquery-date-range-picker/dist/jquery.daterangepicker.min.js"></script>
+  <script src="node_modules/devbridge-autocomplete/dist/jquery.autocomplete.min.js"></script>
+  <script src="node_modules/toastr/build/toastr.min.js"></script>
+  <script src="./script.js"></script>
+</body>
+</html>
